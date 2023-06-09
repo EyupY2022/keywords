@@ -13,7 +13,6 @@ keywords = keywords.apply(lambda x: ' '.join([word.strip() for word in x]) if is
 
 keywords = keywords.fillna('')
 
-# TfidfVectorizer kullanarak anahtar kelimeleri vektörleştirme
 vectorizer = TfidfVectorizer(stop_words='english')
 X = vectorizer.fit_transform(keywords)
 
