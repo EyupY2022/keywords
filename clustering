@@ -16,7 +16,7 @@ keywords = keywords.fillna('')
 vectorizer = TfidfVectorizer(stop_words='english')
 X = vectorizer.fit_transform(keywords)
 
-dbscan = DBSCAN(eps=0.5, min_samples=5)  # eps ve min_samples değerlerini isteğe bağlı olarak ayarlayabilirsiniz
+dbscan = DBSCAN(eps=0.5, min_samples=5)  
 clusters = dbscan.fit_predict(X)
 
 
